@@ -1,13 +1,13 @@
  game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
- if key == _G.TpSettings.key then -- recommended settings 2,5,10,30,20,25,15
+ if key == _G.TpSettings.key then
 TweenService = game:GetService("TweenService")
 plr = game.Players.LocalPlayer.Character.HumanoidRootPart
 tweenInfo = TweenInfo.new(_G.TpSettings.Time)
 Tween = TweenService:Create(plr,tweenInfo, {CFrame = CFrame.new(plr.Position) + plr.CFrame.LookVector * _G.TpSettings.stud})
-Tween:Play()            --Type you code here
+Tween:Play()            
  end
 end)
-local speed = 50 -- set this lower to make it slower
+local speed = 50 -- recommended settings 2,5,10,30,20,25,15
 local bodyvelocityenabled = true -- set this to false if you are getting kicked
 
 local Imput = game:GetService("UserInputService")
